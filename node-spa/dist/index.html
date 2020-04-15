@@ -35,13 +35,13 @@
                     style="display:inline; vertical-align:middle; width:auto;">
                 </br>
                 <label for="prioridade" class=col-3>Prioridade</label>
-                <select id="priori" placeholder="Selecione a prioridade"
+                <select id="priori" class="form-control" placeholder="Selecione a prioridade"
                     style="display:inline; vertical-align:middle; width:auto;">
                     <option>Normal</option>
                     <option>Urgente</option>
                 </select>
                 </br>
-                <button id="botao" class="btn btn-primary" data-id="">
+                <button id="botao" class="btn btn-primary is-create" data-id="">
                     Enviar
                     <i class="fa fa-check" aria-hidden="true"></i>
                 </button>
@@ -116,6 +116,7 @@
                 .then((response) => {
                     console.log(response)
                     lista.innerHTML += templateLi(response.data[0], name, description, start_date, end_date, priority)
+                    clear()
                 })
                 .catch((error) => {
                     console.log(error)
