@@ -20,8 +20,8 @@ const knex = require('knex')({
 //**TEST CONNECTION**//
 knex.select().from('task')
     .then((foo) => {
-        console.log(foo);
-    });
+        console.log(foo)
+})
 
 server.use(restify.plugins.acceptParser(server.acceptable))
 server.use(restify.plugins.queryParser())
@@ -39,12 +39,12 @@ server.get('/', restify.plugins.serveStatic({
 //**ROUTES**//------------------------------------------------------------------------------------------------------
 //SELECT
 server.get('/read', function (req, res, next) {
-    knex('task').then((dados)=>{
-      res.send(dados)
-    },next)
-  
+    knex('task').then((dados) => {
+        res.send(dados)
+    }, next)
+
     return next();
-  });
+});
 //CREATE
 server.post('/create', function (req, res, next) {
     knex('task')
