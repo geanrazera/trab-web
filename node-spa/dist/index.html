@@ -177,6 +177,9 @@
                     if (response.status = 200) {
                         read()
                         clear()
+                        botao.classList.remove('is-update')
+                        botao.classList.add('is-create')
+                        botao.dataset.id = id
                         // this.innerHTML = templateLi(id,input.value, input.value , input.value , input.value , input.value, false)
                     }
                 })

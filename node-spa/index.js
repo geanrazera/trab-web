@@ -18,10 +18,10 @@ const knex = require('knex')({
 })
 
 //**TEST CONNECTION**//
-knex.select().from('task')
-    .then((foo) => {
-        console.log(foo)
-})
+// knex.select().from('task')
+//     .then((foo) => {
+//         console.log(foo)
+// })
 
 server.use(restify.plugins.acceptParser(server.acceptable))
 server.use(restify.plugins.queryParser())
